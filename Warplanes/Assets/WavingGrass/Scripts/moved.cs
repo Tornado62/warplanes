@@ -11,6 +11,9 @@ public class moved : MonoBehaviour
     }
     public float move = 10f;
     public float rotate = 50f;
+    public float up = 10f;
+    
+
 
 
 
@@ -33,6 +36,14 @@ public class moved : MonoBehaviour
         {
             transform.Rotate(Vector3.up, rotate * Time.deltaTime);
         }
-
+        if (Input.GetKey("r"))
+        {
+            transform.Rotate(Vector3.left, -rotate * Time.deltaTime);
+        } 
+        if (Input.GetKey("f"))
+        {
+            transform.Rotate(Vector3.left, rotate * Time.deltaTime);
+        }
+        
     }
 }
